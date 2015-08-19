@@ -3,11 +3,11 @@
 var
     express = require('express')
   , http = require('http')
+  , config = require('config')
   ;
 
 var
-    config = require('./config')
-  , middleware = require('./middleware')
+    middleware = require('./middleware')
   ;
 
 var app = express();
