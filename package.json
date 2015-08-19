@@ -7,6 +7,10 @@
     "type": "git",
     "url": "git://github.com/andzdroid/mongo-express.git"
   },
+  "bin": {
+    "mongo-dashboard": "app.js"
+  },
+  "preferGlobal": true,
   "dependencies": {
     "async": "~0.8.0",
     "basic-auth-connect": "^1.0.0",
