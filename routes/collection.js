@@ -9,6 +9,7 @@ var routes = function(config) {
   exp.viewCollection = function(req, res, next) {
     //var limit = parseInt(req.params.limit, 10) || config.options.documentsPerPage;
     var limit = config.options.documentsPerPage;
+    var deleteConfirmation = config.options.deleteConfirmation;
     var skip = parseInt(req.query.skip, 10) || 0;
     var query_options = {
       limit: limit,
@@ -96,6 +97,7 @@ var routes = function(config) {
           stats: stats,
           editorTheme: config.options.editorTheme,
           limit: limit,
+          deleteConfirmation: deleteConfirmation,
           skip: skip,
           prev: prev,
           prev2: prev2,
