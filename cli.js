@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 
 var _ = require('lodash');
+var path = require('path');
+var config = require('config');
 var options = require('commander');
 
 var packageFile = require('./package');
@@ -11,7 +13,7 @@ options.version(packageFile.version)
 	.parse(process.argv);
 
 if (options.config) {
-	var configObj = require(options.config);
+	var configObj = require(path.resolve(options.config));
 	config = _.merge(config, configObj);
 }
 app();
