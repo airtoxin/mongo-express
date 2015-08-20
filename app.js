@@ -1,7 +1,6 @@
 var
     express = require('express')
   , http = require('http')
-  , config = require('config')
   ;
 
 var
@@ -10,7 +9,7 @@ var
 
 
 
-module.exports = function () {
+module.exports = function (config) {
 	var app = express();
 	app.use('/', middleware(config));
 	app.listen(config.site.port, function() {

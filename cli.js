@@ -2,7 +2,7 @@
 
 var _ = require('lodash');
 var path = require('path');
-var config = require('config');
+var config = require('./config.default');
 var options = require('commander');
 
 var packageFile = require('./package');
@@ -16,4 +16,4 @@ if (options.config) {
 	var configObj = require(path.resolve(options.config));
 	config = _.merge(config, configObj);
 }
-app();
+app(config);
