@@ -56,48 +56,16 @@ These screenshots are from version 0.11.0.
 Usage
 -----
 
-**To install:**
-
-    npm install mongo-express
-
-Or if you want to install a global copy:
+**Install:**
 
     npm install -g mongo-express
 
-**To configure:**
+**Configure and run:**
 
-Copy or rename `node_modules/mongo-express/config.default.js` into a new file.
+default config is [here](config/default.json).
+make your cofig file and fill in your MongoDB connection details, and any other options you want to change.
 
-Fill in your MongoDB connection details, and any other options you want to change.
-
-**To run:**
-
-    node app
-
-**To mount as Express 4 middleware (see `node_modules/mongo-express/app.js`):**
-
-    var
-        express = require('express')
-      , http = require('http')
-      ;
-
-    var
-        config = require('./config')
-      , middleware = require('./middleware')
-      ;
-
-    var app = express();
-    app.use('/your-mountpath', middleware(config));
-    app.listen(config.site.port, function() {
-      console.log("Mongo Express server listening on port " + (config.site.port || 80));
-    });
-
-
-**To use:**
-
-Visit `http://localhost:8081` or whatever URL/port you entered into your
-config (if running standalone) or whatever `config.site.baseUrl` (if mounting
-as a middleware).
+then, run `$ mongo-dashboard -c /path/to/configfile` and visit `http://localhost:8081` or whatever URL/port you entered into your config (if running standalone) or whatever `config.site.baseUrl` (if mounting as a middleware).
 
 
 BSON Data Types
