@@ -12,7 +12,7 @@
   },
   "preferGlobal": true,
   "dependencies": {
-    "async": "~0.8.0",
+    "async": "~1.5.2",
     "basic-auth-connect": "^1.0.0",
     "body-parser": "^1.12.4",
     "commander": "^2.8.1",
